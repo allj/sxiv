@@ -139,16 +139,17 @@ static const keymap_t keys[] = {
 	{ 0,            XK_a,             i_toggle_antialias,   None },
 	{ 0,            XK_A,             i_toggle_alpha,       None },
 	{ 0,            XK_s,             i_slideshow,          None },
+	{ 0,            XK_i,             g_echo,               None },
 };
 
 /* mouse button mappings for image mode: */
 static const button_t buttons[] = {
 	/* modifiers    button            function              argument */
-	{ 0,            1,                i_navigate,           +1 },
-	{ 0,            3,                i_navigate,           -1 },
+	{ 0,            1,                g_switch_mode,        None },
+	{ 0,            3,                g_echo,               None },
 	{ 0,            2,                i_drag,               None },
-	{ 0,            4,                i_scroll,             DIR_UP },
-	{ 0,            5,                i_scroll,             DIR_DOWN },
+	{ 0,            4,                i_navigate,           -1 },
+	{ 0,            5,                i_navigate,           +1 },
 	{ ShiftMask,    4,                i_scroll,             DIR_LEFT },
 	{ ShiftMask,    5,                i_scroll,             DIR_RIGHT },
 	{ 0,            6,                i_scroll,             DIR_LEFT },

@@ -55,6 +55,14 @@ extern int markcnt;
 extern int prefix;
 extern bool extprefix;
 
+bool cg_echo(arg_t _)
+{
+  printf("%s\n", files[fileidx].name);
+  fflush(stdout);
+
+  return true;
+}
+
 bool cg_quit(arg_t _)
 {
 	unsigned int i;
